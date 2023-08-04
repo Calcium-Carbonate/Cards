@@ -23,8 +23,8 @@ public class CardRotation : MonoBehaviour
         Vector3 currentMousePosition = Input.mousePosition;
         Vector3 mouseOffset = currentMousePosition - mouseStartPosition;
 
-        float rotationX = -mouseOffset.y * rotationSpeedX * Time.deltaTime;
-        float rotationY = mouseOffset.x * rotationSpeedY * Time.deltaTime;
+        float rotationX = mouseOffset.y * rotationSpeedX * Time.deltaTime;
+        float rotationY = -mouseOffset.x * rotationSpeedY * Time.deltaTime;
             
         float unclampedRotationX = currentRotationX + rotationX;
         currentRotationX = Mathf.Clamp(unclampedRotationX, -5f, 5f);

@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flare
+  m_Name: Flare 1
   m_Shader: {fileID: -6465566751694194690, guid: 45c1838798d1c4048a304a2059c6843f,
     type: 3}
   m_ValidKeywords: []
