@@ -32,8 +32,7 @@ public class ApiManager : MonoBehaviour
     {   //PokemonBasics
         string urlPokemon = api_Pokemon + id;
         UnityWebRequest wwwPokemon = UnityWebRequest.Get(urlPokemon);
-
-
+        
         yield return wwwPokemon.Send(); //Espera a que se acabe la consulta
         
         if(wwwPokemon.result==UnityWebRequest.Result.ConnectionError) Debug.Log("Ese pokemon no existe");
@@ -42,7 +41,6 @@ public class ApiManager : MonoBehaviour
             if (wwwPokemon.responseCode == 200)
             {   
                 Pokemon pokemon = JsonUtility.FromJson<Pokemon>(wwwPokemon.downloadHandler.text);
-                
                 //PokemonDescription
                 string urlPokemonDescription = api_Pokemon_description + numeroPokemon;
                 UnityWebRequest wwwDescription = UnityWebRequest.Get(urlPokemonDescription);
@@ -50,7 +48,6 @@ public class ApiManager : MonoBehaviour
                 yield return wwwDescription.Send();
                 
                 if (wwwDescription.result == UnityWebRequest.Result.ConnectionError) Debug.Log("Ese pokemon no existe");
-
                 else
                 {
                     string descriptionText = "";
@@ -63,20 +60,14 @@ public class ApiManager : MonoBehaviour
                             break;
                         }  
                     }
-                    
-                    
                     BuildCard(id,pokemon.name,descriptionText);
                 }
-                
-               
             }
-            
         }
     }
 
     IEnumerator DownloadImage(string url,int id, SpriteRenderer pokemonPhoto)
     {
-        
         UnityWebRequest request=UnityWebRequestTexture.GetTexture(url+id+".png?raw=true"); //descargamos la imagen del pokemon
         yield return request.SendWebRequest();
         if (request.isNetworkError || request.isHttpError) Debug.Log(request.error);
@@ -86,7 +77,6 @@ public class ApiManager : MonoBehaviour
             Rect rect = new Rect(0, 0, art.width, art.height);
             pokemonPhoto.sprite = Sprite.Create(art,rect,new Vector2(0.5f,0.5f)); //Convertimos la textura en un sprite
         }
-       
     }
 
     public void BuildCard(int id,string name,string description)
@@ -101,8 +91,6 @@ public class ApiManager : MonoBehaviour
             .Replace("-\n", "-")
             .Replace("\n", " ");
         descriptionTMP.text = correctedDescription;
-
-
     }
 
     public void SearchPokemon()
@@ -133,18 +121,15 @@ public class FlavorText
 {
     public string flavor_text;
     public Language language;
-
 }
 [System.Serializable]
 public class FlavorTextEntries
 {
     public  List<FlavorText> flavor_text_entries;
-
 }
 
 [System.Serializable]
 public class Language
 {
     public string name;
-
 }
