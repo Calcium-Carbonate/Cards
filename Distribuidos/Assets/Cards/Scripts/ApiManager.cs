@@ -24,7 +24,7 @@ public class ApiManager : MonoBehaviour
     
     void Start()
     {
-        StartCoroutine(PokemonSearch(numeroPokemon));
+        
         //StartCoroutine(DownloadImage(api_Sprites,numeroPokemon,pokemon_Art));
     }
     
@@ -52,17 +52,20 @@ public class ApiManager : MonoBehaviour
                 if (wwwDescription.result == UnityWebRequest.Result.ConnectionError) Debug.Log("Ese pokemon no existe");
 
                 else
-                { 
+                {
+                    string descriptionText = "";
                     FlavorTextEntries description = JsonUtility.FromJson<FlavorTextEntries>(wwwDescription.downloadHandler.text);
+                    foreach (FlavorText flavorText in description.flavor_text_entries)
+                    {
+                        if (flavorText.language.name == "en")
+                        {
+                            descriptionText = flavorText.flavor_text;
+                            break;
+                        }  
+                    }
                     
-                    BuildCard(id,pokemon.name,description.flavor_text_entries[0].flavor_text);
-                    /*
-                    nameTMP.text = pokemon.name.Substring(0,1).ToUpper()+pokemon.name.Substring(1).ToLower(); //Mayuscula
-                                  
-                                   StartCoroutine(DownloadImage(api_Sprites, id, pokemon_Art));
-                                   descriptionTMP.text = description.flavor_text_entries[0].flavor_text;
-                                   Debug.Log(description.flavor_text_entries[0].flavor_text);
-                                   */
+                    
+                    BuildCard(id,pokemon.name,descriptionText);
                 }
                 
                
@@ -90,9 +93,21 @@ public class ApiManager : MonoBehaviour
     {   
         nameTMP.text = name.Substring(0,1).ToUpper()+name.Substring(1).ToLower();
         StartCoroutine(DownloadImage(api_Sprites, id, pokemon_Art));
-        descriptionTMP.text = description;
+        string correctedDescription= description
+            .Replace('\f', '\n')
+            .Replace("\u00ad\n", "")
+            .Replace("\u00ad", "")
+            .Replace(" -\n", " - ")
+            .Replace("-\n", "-")
+            .Replace("\n", " ");
+        descriptionTMP.text = correctedDescription;
 
 
+    }
+
+    public void SearchPokemon()
+    {
+        StartCoroutine(PokemonSearch(numeroPokemon));
     }
 
 }
@@ -117,11 +132,19 @@ public class Trainer
 public class FlavorText
 {
     public string flavor_text;
+    public Language language;
 
 }
 [System.Serializable]
 public class FlavorTextEntries
 {
     public  List<FlavorText> flavor_text_entries;
+
+}
+
+[System.Serializable]
+public class Language
+{
+    public string name;
 
 }
