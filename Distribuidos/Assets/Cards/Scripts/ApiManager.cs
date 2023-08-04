@@ -24,7 +24,8 @@ public class ApiManager : MonoBehaviour
     
     void Start()
     {
-        StartCoroutine(PokemonSearch(numeroPokemon));
+       // StartCoroutine(PokemonSearch(numeroPokemon));
+        StartCoroutine(DownloadImage(api_Sprites,numeroPokemon,pokemon_Art));
     }
     
     IEnumerator PokemonSearch(int id)
@@ -53,7 +54,12 @@ public class ApiManager : MonoBehaviour
                 else
                 {
                     description = JsonUtility.FromJson<FlavorText>(wwwDescription.downloadHandler.text);
-                    BuildCard(id,pokemon.name,description.flavor_text,pokemon.types);
+                    //BuildCard(id,pokemon.name,description.flavor_text,pokemon.types);
+                   // StartCoroutine(DownloadImage(api_Sprites, id, pokemon_Art));
+
+                    nameTMP.text = pokemon.name;
+                    descriptionTMP.text = description.flavor_text;
+                    typeTMP.text = pokemon.types[0];
                 }
                 
                

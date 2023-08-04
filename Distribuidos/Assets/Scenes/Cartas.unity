@@ -260,6 +260,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84142158}
   m_CullTransparentMesh: 1
+--- !u!114 &141020004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 141020004, guid: 6c1eea504695f70408208c455d30b217,
+    type: 3}
+  m_PrefabInstance: {fileID: 7914590784739890753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &270360170
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +730,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1331069064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7914590785701861065, guid: 6c1eea504695f70408208c455d30b217,
+    type: 3}
+  m_PrefabInstance: {fileID: 7914590784739890753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2000854318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7914590785566329711, guid: 6c1eea504695f70408208c455d30b217,
+    type: 3}
+  m_PrefabInstance: {fileID: 7914590784739890753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7914590784739890753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -725,6 +761,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3309559233423702467, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: nameTMP
+      value: 
+      objectReference: {fileID: 2000854318}
+    - target: {fileID: 3309559233423702467, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: typeTMP
+      value: 
+      objectReference: {fileID: 141020004}
+    - target: {fileID: 3309559233423702467, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: numeroPokemon
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309559233423702467, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: descriptionTMP
+      value: 
+      objectReference: {fileID: 1331069064}
     - target: {fileID: 7914590785444155986, guid: 6c1eea504695f70408208c455d30b217,
         type: 3}
       propertyPath: m_Name
