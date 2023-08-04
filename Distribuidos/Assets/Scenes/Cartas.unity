@@ -1024,6 +1024,36 @@ PrefabInstance:
       propertyPath: m_TextStyleHashCode
       value: -1183493901
       objectReference: {fileID: 0}
+    - target: {fileID: 7914590785701861062, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785701861062, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785701861062, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3.5664
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785701861062, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.7249
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785701861062, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785701861062, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7914590785701861063, guid: 6c1eea504695f70408208c455d30b217,
         type: 3}
       propertyPath: m_IsActive
