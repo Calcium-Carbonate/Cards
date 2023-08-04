@@ -29,6 +29,12 @@
         },
         {
             "m_Id": "40d19ae835614189b056ec483737cbca"
+        },
+        {
+            "m_Id": "5b1caa0c7d6e4888983d1e2459bfd49d"
+        },
+        {
+            "m_Id": "c470bd0a3839433b873cab2afe659bcd"
         }
     ],
     "m_Keywords": [],
@@ -528,7 +534,7 @@
     },
     "m_PreviewData": {
         "serializedMesh": {
-            "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
+            "m_SerializedMesh": "{\"mesh\":{\"fileID\":10210,\"guid\":\"0000000000000000e000000000000000\",\"type\":0}}",
             "m_Guid": ""
         },
         "preventRotation": false
@@ -927,7 +933,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"441e8cd1ac355d840b15736fdceaa8a4\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -1894,6 +1900,35 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
+    "m_ObjectId": "5b1caa0c7d6e4888983d1e2459bfd49d",
+    "m_Guid": {
+        "m_GuidSerialized": "309b7ee5-520b-4200-9051-d137b608a6d3"
+    },
+    "m_Name": "BorderMask",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "BorderMask",
+    "m_DefaultReferenceName": "_BorderMask",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"2e4b2e6a9cd0ac849b741a7ff8284f97\",\"type\":3}}",
+        "m_Guid": ""
+    },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
+    "m_Modifiable": true,
+    "m_DefaultType": 0
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.ColorRGBMaterialSlot",
     "m_ObjectId": "5e093ab8b55f4231b5f1db35ef4af20c",
     "m_Id": 0,
@@ -2109,6 +2144,12 @@
         },
         {
             "m_Id": "40d19ae835614189b056ec483737cbca"
+        },
+        {
+            "m_Id": "5b1caa0c7d6e4888983d1e2459bfd49d"
+        },
+        {
+            "m_Id": "c470bd0a3839433b873cab2afe659bcd"
         }
     ]
 }
@@ -2672,7 +2713,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"430e0260d0774754ea38120ac091fd23\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -3257,6 +3298,35 @@
 }
 
 {
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "c470bd0a3839433b873cab2afe659bcd",
+    "m_Guid": {
+        "m_GuidSerialized": "2fb191ee-70cd-4366-93a9-5bcc89de4177"
+    },
+    "m_Name": "BorderColor",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "BorderColor",
+    "m_DefaultReferenceName": "_BorderColor",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+    },
+    "isMainColor": false,
+    "m_ColorMode": 0
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SamplerStateMaterialSlot",
     "m_ObjectId": "c4bac3437e524c7fba5482f7dde8cd9d",
@@ -3608,7 +3678,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"d3ed0f653f634de4eabd04535c1c92bd\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -3629,10 +3699,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 122.00001525878906,
-            "y": 789.0,
-            "width": 207.9999542236328,
-            "height": 361.0
+            "x": 75.99998474121094,
+            "y": 769.0000610351563,
+            "width": 207.99998474121095,
+            "height": 360.99993896484377
         }
     },
     "m_Slots": [
@@ -3673,7 +3743,7 @@
     ],
     "m_Precision": 0,
     "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
+    "m_PreviewMode": 1,
     "m_CustomColors": {
         "m_SerializableColors": []
     },
