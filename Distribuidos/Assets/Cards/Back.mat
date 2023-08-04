@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Carta
+  m_Name: Back
   m_Shader: {fileID: -6465566751694194690, guid: 81eaba2c3e7d61942a78a6afafbb3c89,
     type: 3}
   m_ValidKeywords:
@@ -60,9 +60,11 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _Blend: 0
+    - _Blend_1: 0.316
+    - _Blend_2: 0
     - _CastShadows: 1
-    - _Cull: 2
-    - _DistortionAmount: 29.7
+    - _Cull: 1
+    - _DistortionAmount: 40
     - _DstBlend: 10
     - _OffsetAmount: 0.63
     - _QueueControl: 0
