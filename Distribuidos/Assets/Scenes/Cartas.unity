@@ -761,6 +761,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141020002, guid: 6c1eea504695f70408208c455d30b217, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3309559233423702467, guid: 6c1eea504695f70408208c455d30b217,
         type: 3}
       propertyPath: nameTMP
@@ -774,13 +778,38 @@ PrefabInstance:
     - target: {fileID: 3309559233423702467, guid: 6c1eea504695f70408208c455d30b217,
         type: 3}
       propertyPath: numeroPokemon
-      value: 69
+      value: 448
       objectReference: {fileID: 0}
     - target: {fileID: 3309559233423702467, guid: 6c1eea504695f70408208c455d30b217,
         type: 3}
       propertyPath: descriptionTMP
       value: 
       objectReference: {fileID: 1331069064}
+    - target: {fileID: 7914590784234025454, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785242079475, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785242079475, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785242079475, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785242079475, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 7914590785444155986, guid: 6c1eea504695f70408208c455d30b217,
         type: 3}
       propertyPath: m_Name
@@ -841,5 +870,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7914590785566329711, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785566329711, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785701861063, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914590785701861065, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f45e46395a4a38642a9590a4574f901f,
+        type: 2}
+    - target: {fileID: 7914590785701861065, guid: 6c1eea504695f70408208c455d30b217,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4413744454848579993, guid: f45e46395a4a38642a9590a4574f901f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1eea504695f70408208c455d30b217, type: 3}

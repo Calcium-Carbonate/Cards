@@ -24,8 +24,8 @@ public class ApiManager : MonoBehaviour
     
     void Start()
     {
-       // StartCoroutine(PokemonSearch(numeroPokemon));
-        StartCoroutine(DownloadImage(api_Sprites,numeroPokemon,pokemon_Art));
+        StartCoroutine(PokemonSearch(numeroPokemon));
+        //StartCoroutine(DownloadImage(api_Sprites,numeroPokemon,pokemon_Art));
     }
     
     IEnumerator PokemonSearch(int id)
@@ -33,8 +33,7 @@ public class ApiManager : MonoBehaviour
         string urlPokemon = api_Pokemon + id;
         UnityWebRequest wwwPokemon = UnityWebRequest.Get(urlPokemon);
 
-        
-        
+
         yield return wwwPokemon.Send(); //Espera a que se acabe la consulta
         
         if(wwwPokemon.result==UnityWebRequest.Result.ConnectionError) Debug.Log("Ese pokemon no existe");
@@ -48,18 +47,22 @@ public class ApiManager : MonoBehaviour
                 string urlPokemonDescription = api_Pokemon_description + numeroPokemon;
                 UnityWebRequest wwwDescription = UnityWebRequest.Get(urlPokemonDescription);
                 //En la Api se le conoce como Flavor Text a la descripcion del pokemon :D
-                FlavorText description;
+                yield return wwwDescription.Send();
+                
                 if (wwwDescription.result == UnityWebRequest.Result.ConnectionError) Debug.Log("Ese pokemon no existe");
 
                 else
-                {
-                    description = JsonUtility.FromJson<FlavorText>(wwwDescription.downloadHandler.text);
-                    //BuildCard(id,pokemon.name,description.flavor_text,pokemon.types);
-                   // StartCoroutine(DownloadImage(api_Sprites, id, pokemon_Art));
-
-                    nameTMP.text = pokemon.name;
-                    descriptionTMP.text = description.flavor_text;
-                    typeTMP.text = pokemon.types[0];
+                { 
+                    FlavorTextEntries description = JsonUtility.FromJson<FlavorTextEntries>(wwwDescription.downloadHandler.text);
+                    
+                    BuildCard(id,pokemon.name,description.flavor_text_entries[0].flavor_text);
+                    /*
+                    nameTMP.text = pokemon.name.Substring(0,1).ToUpper()+pokemon.name.Substring(1).ToLower(); //Mayuscula
+                                  
+                                   StartCoroutine(DownloadImage(api_Sprites, id, pokemon_Art));
+                                   descriptionTMP.text = description.flavor_text_entries[0].flavor_text;
+                                   Debug.Log(description.flavor_text_entries[0].flavor_text);
+                                   */
                 }
                 
                
@@ -71,37 +74,34 @@ public class ApiManager : MonoBehaviour
     IEnumerator DownloadImage(string url,int id, SpriteRenderer pokemonPhoto)
     {
         
-        UnityWebRequest request=UnityWebRequestTexture.GetTexture(url+id+".png"); //descargamos la imagen del pokemon
+        UnityWebRequest request=UnityWebRequestTexture.GetTexture(url+id+".png?raw=true"); //descargamos la imagen del pokemon
         yield return request.SendWebRequest();
         if (request.isNetworkError || request.isHttpError) Debug.Log(request.error);
         else
         {
             Texture2D art = ((DownloadHandlerTexture)request.downloadHandler).texture; //Creamos la textura
             Rect rect = new Rect(0, 0, art.width, art.height);
-            pokemonPhoto.sprite = Sprite.Create(art,rect,Vector2.zero,0.01f); //Convertimos la textura en un sprite
+            pokemonPhoto.sprite = Sprite.Create(art,rect,new Vector2(0.5f,0.5f)); //Convertimos la textura en un sprite
         }
        
     }
 
-    public void BuildCard(int id,string name,string description,List<string> types)
-    {
+    public void BuildCard(int id,string name,string description)
+    {   
+        nameTMP.text = name.Substring(0,1).ToUpper()+name.Substring(1).ToLower();
         StartCoroutine(DownloadImage(api_Sprites, id, pokemon_Art));
-
-        nameTMP.text = name;
         descriptionTMP.text = description;
-        typeTMP.text = types[0];
-        
+
 
     }
- 
+
 }
 [System.Serializable]
 public class Pokemon
 {
     public int id;
     public string name;
-    public List<string> types;
-    public string image;
+    //public List<string> types;
 }
 
 [System.Serializable]
@@ -117,5 +117,11 @@ public class Trainer
 public class FlavorText
 {
     public string flavor_text;
+
+}
+[System.Serializable]
+public class FlavorTextEntries
+{
+    public  List<FlavorText> flavor_text_entries;
 
 }
