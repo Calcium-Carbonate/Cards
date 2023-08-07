@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine.Serialization;
 
 
-public class ApiManager : MonoBehaviour
+public class CardManager : MonoBehaviour
 {
     //Api
     private string api_Pokemon = "https://pokeapi.co/api/v2/pokemon/"; //Pokemon Api para ID,Nombre Y tipo
@@ -63,6 +63,12 @@ public class ApiManager : MonoBehaviour
                     BuildCard(id,pokemon.name,descriptionText);
                 }
             }
+            else
+            {
+                string error_message = "Status: " + wwwPokemon.responseCode;
+                error_message += "\nContent-Type: " + wwwPokemon.GetResponseHeader("content-type") + "\nError:" + wwwPokemon.error;
+                Debug.Log(error_message);
+            }
         }
     }
 
@@ -93,9 +99,10 @@ public class ApiManager : MonoBehaviour
         descriptionTMP.text = correctedDescription;
     }
 
-    public void SearchPokemon()
+    public void SearchPokemon(int id)
     {
-        StartCoroutine(PokemonSearch(numeroPokemon));
+        
+        StartCoroutine(PokemonSearch(id));
     }
 
 }
@@ -107,14 +114,6 @@ public class Pokemon
     //public List<string> types;
 }
 
-[System.Serializable]
-public class Trainer
-{
-    public int id;
-    public string name;
-    public int[] deck;
-    public string img;
-}
 
 [System.Serializable]
 public class FlavorText
