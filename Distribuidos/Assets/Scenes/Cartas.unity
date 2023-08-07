@@ -621,6 +621,8 @@ MonoBehaviour:
   - {fileID: 1665206432}
   - {fileID: 1887922399}
   - {fileID: 1619950442}
+  trainerPhoto: {fileID: 8008658574512798156}
+  trainerNameTMP: {fileID: 8008658574183322193}
 --- !u!4 &434977138
 Transform:
   m_ObjectHideFlags: 0
@@ -11738,7 +11740,7 @@ GameObject:
   - component: {fileID: 8008658574183322192}
   - component: {fileID: 8008658574183322193}
   m_Layer: 0
-  m_Name: pk_Name
+  m_Name: Trainer_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11799,7 +11801,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7fb77f8259b8f6c4ba28a7c7a94fe746, type: 2}
+  - {fileID: 2100000, guid: 1803850991011d64b8dd2d5155911de8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11883,7 +11885,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 95bd66078a1a8b349812861a8b2bc54f, type: 2}
+  - {fileID: 2100000, guid: 85f520b48cc711944939bcf393d8b5fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11904,7 +11906,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -4
-  m_Sprite: {fileID: 21300000, guid: 430e0260d0774754ea38120ac091fd23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1b401fff312b6045bec611428d1b62b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
