@@ -24,5 +24,11 @@
       "deck": [ 445, 471, 448 ,468,350,442],
      "img": "https://github.com/Calcium-Carbonate/Cards/blob/main/masters-img/Cintia.png"
     }
+    {
+      "id": 33,
+      "name": "Simon",
+      "deck": [ 395, 724, 445 ,6,483,507],
+     "img": "https://github.com/Calcium-Carbonate/Cards/blob/main/masters-img/Simon.png"
+    }
   ]
 }
