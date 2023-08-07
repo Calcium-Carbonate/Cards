@@ -52,10 +52,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Offset: 0.007
+    - _Offset: 0.008
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.5176471, g: 1.8745098, b: 1.9294118, a: 0}
+    - _Color: {r: 4.594794, g: 0.4534012, b: 0, a: 0}
     - _Offset: {r: 0.01, g: 0.01, b: 0, a: 0}
   m_BuildTextureStacks: []

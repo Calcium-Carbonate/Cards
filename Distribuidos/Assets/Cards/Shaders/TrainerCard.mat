@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TrainerCard
-  m_Shader: {fileID: -6465566751694194690, guid: 81eaba2c3e7d61942a78a6afafbb3c89,
+  m_Shader: {fileID: -6465566751694194690, guid: 747758ec6200e1645a10143469f88c18,
     type: 3}
   m_ValidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
@@ -28,8 +28,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Background:
+        m_Texture: {fileID: 2800000, guid: 5ff6067fc19505149bdf318c98ff2904, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BorderMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2e4b2e6a9cd0ac849b741a7ff8284f97, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CardBorder:
@@ -45,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0d4d679731b619045b54cd91def81913, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
@@ -67,14 +71,15 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _BackGroundOffset: 0.1
     - _Blend: 0
     - _Blend_1: 0.531
     - _Blend_2: 1
     - _CastShadows: 1
     - _Cull: 2
-    - _DistortionAmount: 19.1
+    - _DistortionAmount: 22.1
     - _DstBlend: 10
-    - _OffsetAmount: -0.39
+    - _OffsetAmount: 0.24
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
